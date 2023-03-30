@@ -24,4 +24,21 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book b2 = (Book) other;
+        return bookName.equals(b2.bookName);
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(bookName);
+    }
+    @Override
+    public String toString() {
+        return "Имя автора книги - " + this.author + "; " + "Название книги - " + this.bookName + "; ";
+    }
+
 }
