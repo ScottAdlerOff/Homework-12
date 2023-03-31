@@ -30,11 +30,13 @@ public class Book {
             return false;
         }
         Book b2 = (Book) other;
-        return bookName.equals(b2.bookName);
+        return bookName.equals(b2.bookName + b2.author);
     }
+
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(bookName);
+        return java.util.Objects.hash(bookName,author,publishingYear);
     }
     @Override
     public String toString() {

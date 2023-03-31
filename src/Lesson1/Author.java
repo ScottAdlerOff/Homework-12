@@ -21,11 +21,12 @@ public class Author {
             return false;
         }
         Author fn2 = (Author) other;
-        return firstName.equals(fn2.firstName);
+        return firstName.equals(fn2.firstName + fn2.secondName);
     }
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(firstName);
+        return java.util.Objects.hash(firstName,secondName);
     }
 
     public String toString() {
