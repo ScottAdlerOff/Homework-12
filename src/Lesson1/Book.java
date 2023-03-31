@@ -30,7 +30,7 @@ public class Book {
             return false;
         }
         Book b2 = (Book) other;
-        return bookName.equals(b2.bookName + b2.author);
+        return bookName.equals(b2.bookName) && author.equals(b2.author);
     }
 
 

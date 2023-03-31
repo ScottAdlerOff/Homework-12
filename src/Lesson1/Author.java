@@ -21,7 +21,7 @@ public class Author {
             return false;
         }
         Author fn2 = (Author) other;
-        return firstName.equals(fn2.firstName + fn2.secondName);
+        return firstName.equals(fn2.firstName) && secondName.equals(fn2.secondName);
     }
 
     @Override
